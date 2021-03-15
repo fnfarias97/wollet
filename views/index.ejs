@@ -1,11 +1,65 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<%- include('partials/head') %>
+    <%- include('partials/header') %>
+
+    <div class="banner-main">
+        <img class = "radius-10"src ='images/banner-1.jpg' alt = ""/>
+    </div>
+
+    <main class="bg-main radius-10 p-20 shadow">
+        <h1 class="title">Nuestros productos más vendidos:</h1>
+        <section class="d-flex">
+            <article class="card-container shadow">
+                <div class="card">
+                    <a href="/products/detalle/1">
+                        <img src ='/images/download.jpg' alt = ""/>
+
+                    <div class="van">
+                        <p class="precio-producto">$ 12.500</p>
+                    </div>
+                    <div>
+                        <p class="descripcion-producto">Procesador AMD RYZEN 5 1600f 3.20Ghz</p>       
+                    </div>
+                    </a>
+                </div>
+            </article>
+            <article class="card-container shadow">
+                <div class="card">
+                    <a href="/products/detalle/10">
+                        <img src ='/images/download.jpg' alt = ""/>
+
+                    <div class="van">
+                        <p class="precio-producto">$ 33.000</p>
+                    </div>
+                    <div>
+                        <p class="descripcion-producto">Placa de video AMD RX 5500 XT 8 Gb GDDR6</p>       
+                    </div>
+                    </a>
+                </div>
+            </article>
+            <article class="card-container shadow">
+                <div class="card">
+                    <a href="/products/detalle/3">
+                        <img src ='/images/download.jpg' alt = ""/>
+                    <div class="van">
+                        <p class="precio-producto">$ 8.500</p>
+                    </div>
+                    <div>
+                        <p class="descripcion-producto">Procesador Intel core i3-9100F 4.2 Ghz turbo</p>       
+                    </div>
+                    </a>
+                </div>
+            </article>
+        </section>
+        <div class="boton d-flex">
+            <a href="/products">Mirá todos nuestros productos</a>
+        </div>
+        <section class="formas-de-pago">
+            <div class="shadow d-flex">
+                <a href = '/'><i class="fas fa-credit-card footer-images borde"></i>Pagá con tarjeta</a>
+                <a href = '/'><i class="far fa-handshake borde"></i>MercadoPago</a>
+                <a href = '/'><i class="far fa-money-bill-alt"></i>En efectivo</a>
+            </div>
+        </section>
+    </main>
+
+    <%- include('partials/footer') %>

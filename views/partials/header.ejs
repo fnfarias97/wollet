@@ -1,0 +1,32 @@
+<header>
+  <section class="section-header">
+    <a href="/"><img class="logo" src="/images/logo.png"></a>
+    <form action="/">
+        <input class="shadow" type="search" id="search" name="name" placeholder="Buscar transacción"/>
+    </form>
+
+      <div class="carrito-header shadow">
+          <a href="/products/carrito"><i class="fas fa-shopping-cart"></i></a>
+      </div>
+  </section>
+
+  <nav class="shadow">
+      <% if (typeof locals.user == "undefined") { %> 
+          <a href='/'>HOME</a>
+          <a href='/auth/ingresar'>INGRESAR</a>
+          <a href='/products'>PRODUCTOS</a>
+          <a href='/auth/registrar'>REGISTRAR</a>
+          <a href='/contact'>CONTACTO</a>
+      <% } else { %> 
+          <a href="/auth/perfil">Bienvenido <%= locals.user.email %></a>
+          <a href='/products'>PRODUCTOS</a>
+          <a href='/contact'>CONTACTO</a>
+          <a href='/auth/logout'>CERRAR SESION</a>
+      <% } %> 
+  </nav>
+
+
+  <div class="menu">
+    <i class="fas fa-bars burguer shadow"></i>
+  </div>
+</header>
